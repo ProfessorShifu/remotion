@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  AbsoluteFill, Sequence, interpolate, spring, useCurrentFrame, useVideoConfig,
+  AbsoluteFill, Easing, Sequence, interpolate, spring, useCurrentFrame, useVideoConfig,
 } from 'remotion';
 import {theme,bengaliFont} from '../theme';
 import {BrandMark} from '../components/BrandMark';
