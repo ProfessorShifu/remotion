@@ -1,80 +1,58 @@
 # Prostuti Motion Studio
 
-A Remotion 4 + React + TypeScript studio for producing branded motion-graphics campaigns for **প্রস্তুতি (Prostuti)**.
+A Remotion 4 + React + TypeScript campaign studio for **প্রস্তুতি (Prostuti)**.
 
-## Campaign compositions
+## Output compositions
 
-| Composition ID | Canvas | Duration | Frame rate |
+| Composition | Canvas | Runtime | FPS |
 | --- | ---: | ---: | ---: |
-| `Prostuti-Landscape` | 1920 × 1080 (16:9) | 54 sec | 30 fps |
-| `Prostuti-Vertical` | 1080 × 1920 (9:16) | 54 sec | 30 fps |
-| `Prostuti-Square` | 1080 × 1080 (1:1) | 54 sec | 30 fps |
+| `Prostuti-Landscape` | 1920 × 1080 | 54 sec | 30 |
+| `Prostuti-Vertical` | 1080 × 1920 | 54 sec | 30 |
+| `Prostuti-Square` | 1080 × 1080 | 54 sec | 30 |
 
-## Requirements
+## Run and render
 
-- Node.js 20 LTS or newer
-- npm
-- A supported FFmpeg installation/runtime
-
-## Run locally
+Requires Node.js 20+ and npm.
 
 ```bash
 npm install
 npm run dev
-```
-
-Open Remotion Studio and select one of the three campaign formats.
-
-## Render videos
-
-```bash
 npm run render:landscape
 npm run render:vertical
 npm run render:square
 ```
 
-Rendered MP4 files are written to `out/`.
+MP4 outputs are written under `out/`.
 
-## Campaign sequence
+## Campaign scenes
 
-1. Brand reveal and positioning
-2. The preparation challenge
-3. Prostuti platform introduction
-4. Target examination categories
-5. Five preparation features
-6. A simple preparation workflow
-7. Brand close and website CTA
+1. Logo and brand opening
+2. Competitive-exam preparation challenge
+3. Connected preparation categories diagram
+4. Exam-category overview
+5. Five key product capability cards
+6. A four-step preparation flow
+7. Brand close and prostuti.co call to action
 
-Scene durations and transition timing live in `src/compositions/ProstutiCampaign.tsx`.
+Edit scene copy, timings and motion in `src/compositions/ProstutiCampaign.tsx`. Shared tokens are in `src/theme.ts`; reusable visual components are in `src/components/`.
 
-## Brand system
+## Brand and asset requirements
 
-| Token | Value |
-| --- | --- |
-| Primary blue | `#3158D8` |
-| Dark navy | `#17243B` |
-| White | `#FFFFFF` |
-| Background | `#F7F9FD` |
-| Mint accent | `#DFF6ED` |
+- Palette: blue `#3158D8`, navy `#17243B`, white `#FFFFFF`, background `#F7F9FD`, mint `#DFF6ED`.
+- Add the exact approved logo as `public/assets/prostuti-logo.png`. The brand component intentionally references this asset rather than redrawing the supplied mark.
+- Add licensed Bengali fonts for reproducible typography across render machines.
+- Animated category diagrams and abstract panels are illustrative graphics, not actual platform screenshots.
+- Replace product-facing visuals with approved screenshots before publishing a product-accurate campaign.
+- No invented statistics, testimonials, awards or government endorsements are included.
+- Audio is intentionally not fabricated or bundled. Add only properly licensed music/SFX in `public/audio/` and wire them into the composition after assets are supplied.
 
-The campaign uses Bengali-first copy with a Bengali-capable font stack. For consistent output on every render machine, install a properly licensed Bengali font (for example, Hind Siliguri or Noto Sans Bengali) and register it in the project.
+## Project layout
 
-## Official assets and factual accuracy
+- `src/index.ts`: Remotion entry
+- `src/Root.tsx`: composition registrations
+- `src/compositions/ProstutiCampaign.tsx`: campaign scenes and sequencing
+- `src/components/`: reusable visual components
+- `src/theme.ts`: brand tokens
+- `remotion.config.ts`: render settings
 
-- Put the exact approved logo at `public/assets/prostuti-logo.png`. Do not redraw or approximate the official mark.
-- Put approved platform screenshots under `public/assets/` before producing a final product-accurate cut.
-- The animated diagrams and dashboard-style visuals currently in this project are illustrative storytelling graphics. They are not screenshots and must not be presented as live platform UI.
-- No user counts, pass rates, testimonials, awards, or government affiliations are asserted.
-- Add licensed music and sound effects under `public/audio/` only after confirming usage rights. The composition intentionally does not bundle a soundtrack.
-
-## Structure
-
-- `src/Root.tsx`: output format registrations
-- `src/compositions/ProstutiCampaign.tsx`: full campaign and scene timing
-- `src/components/`: reusable brand, typography, feature, and glass-panel primitives
-- `src/theme.ts`: shared brand tokens
-- `remotion.config.ts`: render configuration
-
-## Editing
-
-Update copy, scene timing, colors, and motion in the composition and shared components. Keep `remotion` and all `@remotion/*` dependencies on the same exact version.
+Keep `remotion` and `@remotion/cli` on the same exact version.
