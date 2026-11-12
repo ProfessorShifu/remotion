@@ -1,0 +1,24 @@
+{
+  "name": "the-loop-remotion-film",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A cinematic hand-drawn 2D animated short about the repetition of everyday life.",
+  "scripts": {
+    "start": "remotion studio src/index.ts",
+    "build": "remotion render src/index.ts TheLoop out/the-loop.mp4",
+    "still": "remotion still src/index.ts TheLoop out/poster.png --frame=450",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.543",
+    "@remotion/google-fonts": "4.0.543",
+    "remotion": "4.0.543",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "18.3.12",
+    "@types/react-dom": "18.3.1",
+    "typescript": "5.7.2"
+  }
+}
