@@ -1,44 +1,35 @@
-# THE LOOP
+# একই চক্র (The Loop)
 
-A cinematic, original 2D animated short built with Remotion 4.
+একটি বাংলা অ্যানিমেটেড স্বল্পদৈর্ঘ্য চলচ্চিত্র। একজন ক্লান্ত মানুষ প্রতিদিন একই ছকে আটকে থাকে: অ্যালার্ম, যাতায়াত, কাজ, বাড়ি ফেরা, ঘুম। এক সকালে সে বুঝতে পারে, সবকিছু একদিনে পাল্টাতে না পারলেও নিজের জন্য একটি ছোট সিদ্ধান্ত নেওয়া যায়।
 
-## Story
+## চলচ্চিত্রের ভাষা
+- পর্দার শিরোনাম, দৃশ্য-লেবেল ও বর্ণনামূলক ক্যাপশন বাংলায়।
+- সংলাপবিহীন ভিজ্যুয়াল গল্প বলা, আবহ, আলো ও চরিত্রের চলনের মাধ্যমে আবেগ প্রকাশ।
+- শেষ দৃশ্যে চরিত্রটি অ্যালার্ম বন্ধ করে জানালা খোলে এবং নিজের জন্য সময় রাখার সিদ্ধান্ত নেয়।
 
-A tired man moves through the same daily rhythm: waking to the alarm, commuting through a crowded city, working under artificial light, returning home, and waking to the same alarm again.
+## স্পেসিফিকেশন
+- দৈর্ঘ্য: ২ মিনিট
+- রেজোলিউশন: ১৯২০×১০৮০
+- ফ্রেম রেট: ৩০ fps
+- মোট ফ্রেম: ৩৬০০
+- চরিত্র ও পরিবেশ SVG/React দিয়ে তৈরি।
 
-## Visual approach
-
-- Original character drawn in React SVG, with breathing, blinking, walking motion and tired expressions.
-- Environments built from original SVG illustration and layered shapes.
-- Frame-driven scene timing, captions, atmospheric gradients, vignette and procedural film grain.
-- 1920×1080, 30 fps, 30-second short.
-
-No external artwork or stock imagery is required.
-
-## Run
-
+## চালানো
 ```bash
 npm install
 npm run start
 ```
 
-## Render
-
+## রেন্ডার
 ```bash
 npm run build
 ```
+ভিডিও তৈরি হবে `out/the-loop.mp4` ফাইলে।
 
-Output: `out/the-loop.mp4`
-
-## Validate
-
+## টাইপ পরীক্ষা
 ```bash
 npm run typecheck
 ```
 
-## Structure
-
-- `src/Character.tsx`: reusable animated character.
-- `src/TheLoop.tsx`: environments, scenes, transitions and film composition.
-- `src/Root.tsx`: Remotion composition registration.
-- `src/index.ts`: entry point.
+## গুরুত্বপূর্ণ
+বাংলা টেক্সটের জন্য Noto Sans Bengali বা সমমানের বাংলা ফন্ট থাকলে সবচেয়ে ভালো ফল পাওয়া যাবে। এই রিপোজিটরিতে এখনো রেন্ডার করা MP4 বা রেকর্ড করা ভয়েসওভার অন্তর্ভুক্ত নেই।
