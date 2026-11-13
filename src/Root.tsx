@@ -1,5 +1,6 @@
 import { Composition } from "remotion";
-import { Scene } from "./Scene\n
+import { Scene } from "./Scene";
+
 // Remotion 3D Animation
 // Floating geometric shapes with orbiting camera and dynamic lighting.
 // Driven purely by useCurrentFrame() for deterministic rendering.
