@@ -7,6 +7,7 @@
     "build": "remotion bundle",
     "render:golpo01": "remotion render Golpo01SonarToroni out/golpo-01-sonar-toroni.mp4 --gl=swangle",
     "render:golpo02": "remotion render Golpo02LittleFirefly out/golpo-02-little-firefly.mp4",
+    "render:golpo03": "remotion render Golpo03GumJourney out/golpo-03-gum-journey.mp4 --gl=swangle",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
