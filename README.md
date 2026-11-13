@@ -8,8 +8,11 @@ A modular, adaptable **Remotion** studio where every video lives in its own isol
 - `src/global/` — Shared, battle-tested building blocks (`CameraRig`, `KineticBanglaHUD`, `Atmospheric3D`, `fonts`, `math`).
 - `src/projects/<project-name>/` — Self-contained story/video projects (`config.ts`, `voiceScript.ts`, scene components).
 
-## Included Starter Project
-- **`golpo-01-sonar-toroni`** (*সোনার তরণী — এক বিস্মৃত মাঝির গল্প*): A 30-second, 1080x1920 (9:16) 3D Bangla story about a village boatman on a misty Bengal river at dusk.
+## Included Projects
+- **`golpo-01-sonar-toroni`** (*সোনার তরণী*): 30s 3D story of a golden boat on a misty river at dusk.
+- **`golpo-02-little-firefly`**: 2D SVG firefly journey through a moonlit village.
+- **`golpo-03-gum-journey`**: Longer 3D anatomical comedy/education piece.
+- **`golpo-04-padma-diya`** (*পদ্মার প্রদীপ*): **New** — 30s atmospheric 3D story of floating clay diyas on the Padma under moonlight; prayers carried by the river.
 
 ## Quick Start
 ```bash
@@ -17,7 +20,8 @@ npm install
 npm run dev
 ```
 
-## Render Starter Story
+## Render
 ```bash
-npm run render:golpo01
+npm run render:golpo01   # Sonar Toroni
+npm run render:golpo04   # Padma Diya (new)
 ```

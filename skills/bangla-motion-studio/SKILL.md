@@ -20,3 +20,4 @@ version: 1.0.0
 
 ## 3. Adaptation Log (Update Day by Day)
 - **v1.0.0:** Initialized global `CameraRig`, `KineticBanglaHUD`, `Fireflies3D`, `FlickeringLantern3D`, and `WaterPlane3D` alongside `golpo-01-sonar-toroni`.
+- **v1.1.0:** Added `golpo-04-padma-diya` — a 30s atmospheric 3D story of floating diyas on the Padma river under moonlight. Reuses all global primitives; new project-local `FloatingDiya` component kept isolated (candidate for promotion if reused).

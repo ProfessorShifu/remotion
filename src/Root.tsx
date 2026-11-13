@@ -6,6 +6,8 @@ import {LittleFirefly} from './projects/golpo-02-little-firefly/LittleFirefly';
 import {GOLPO02_META} from './projects/golpo-02-little-firefly/config';
 import {GumJourney} from './projects/golpo-03-gum-journey/GumJourney';
 import {GOLPO03_META} from './projects/golpo-03-gum-journey/config';
+import {PadmaDiya3D} from './projects/golpo-04-padma-diya/PadmaDiya3D';
+import {GOLPO04_META} from './projects/golpo-04-padma-diya/config';
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -33,6 +35,14 @@ export const RemotionRoot: React.FC = () => {
         fps={GOLPO03_META.fps}
         width={GOLPO03_META.width}
         height={GOLPO03_META.height}
+      />
+      <Composition
+        id={GOLPO04_META.id}
+        component={PadmaDiya3D}
+        durationInFrames={GOLPO04_META.durationInFrames}
+        fps={GOLPO04_META.fps}
+        width={GOLPO04_META.width}
+        height={GOLPO04_META.height}
       />
     </>
   );
